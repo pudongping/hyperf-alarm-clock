@@ -1,0 +1,38 @@
+{
+    "name": "pudongping/hyperf-alarm-clock",
+    "description": "A utility for measuring code execution time, detecting timeouts, and sending notifications.",
+    "type": "library",
+    "keywords": [
+        "php",
+        "hyperf",
+        "notifications",
+        "code execution time"
+    ],
+    "homepage": "https://github.com/pudongping/hyperf-alarm-clock",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pudongping",
+            "email": "pudongping67@gmail.com",
+            "homepage": "https://github.com/pudongping"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pudongping\\HyperfAlarmClock\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "hyperf/http-server": "~2.2.0",
+        "hyperf/logger": "~2.2.0",
+        "hyperf/config": "~2.2.0"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "^4.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
