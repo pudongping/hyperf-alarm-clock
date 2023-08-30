@@ -12,27 +12,15 @@ namespace Pudongping\HyperfAlarmClock;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Contract\StdoutLoggerInterface;
-use Hyperf\Utils\Codec\Json;
+use Hyperf\Codec\Json;
 
 class StdoutChannel implements ChannelContract
 {
 
-    /**
-     * @var ConfigInterface
-     */
-    protected $config;
-
-    /**
-     * @var StdoutLoggerInterface
-     */
-    protected $logger;
-
     public function __construct(
-        ConfigInterface       $config,
-        StdoutLoggerInterface $logger
+        protected ConfigInterface       $config,
+        protected StdoutLoggerInterface $logger
     ) {
-        $this->config = $config;
-        $this->logger = $logger;
     }
 
     public function notice(array $data)

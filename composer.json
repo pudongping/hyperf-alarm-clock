@@ -23,14 +23,14 @@
         }
     },
     "require": {
-        "php": ">=7.2",
-        "hyperf/http-server": "~2.2.0",
-        "hyperf/logger": "~2.2.0",
-        "hyperf/config": "~2.2.0",
-        "hyperf/guzzle": "~2.2.0"
+        "php": ">=8.0",
+        "hyperf/http-server": "~3.0.0",
+        "hyperf/logger": "~3.0.0",
+        "hyperf/config": "~3.0.0",
+        "hyperf/guzzle": "~3.0.0"
     },
     "require-dev": {
-        "swoole/ide-helper": "^4.5"
+        "swoole/ide-helper": "^5.0"
     },
     "config": {
         "optimize-autoloader": true,

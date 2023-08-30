@@ -20,22 +20,10 @@ use Psr\Http\Server\RequestHandlerInterface;
 class AlarmClockMiddleware implements MiddlewareInterface
 {
 
-    /**
-     * @var ContainerInterface
-     */
-    protected $container;
-
-    /**
-     * @var RequestInterface
-     */
-    protected $request;
-
     public function __construct(
-        ContainerInterface $container,
-        RequestInterface   $request
+        protected ContainerInterface $container,
+        protected RequestInterface   $request
     ) {
-        $this->container = $container;
-        $this->request = $request;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface

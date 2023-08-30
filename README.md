@@ -14,14 +14,14 @@
 
 ## 运行环境
 
-- php >= 7.2
+- php >= 8.0
 - composer
-- hyperf ~2.2.0
+- hyperf ~3.0.0
 
 ## 安装
 
 ```shell
-composer require pudongping/hyperf-alarm-clock:^1.0 -vvv
+composer require pudongping/hyperf-alarm-clock:^2.0 -vvv
 ```
 
 ## 分支或者标签

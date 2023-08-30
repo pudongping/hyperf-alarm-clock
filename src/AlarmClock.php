@@ -12,9 +12,11 @@ namespace Pudongping\HyperfAlarmClock;
 
 use Throwable;
 use Hyperf\HttpServer\Contract\RequestInterface;
-use Hyperf\Utils\ApplicationContext;
+use Hyperf\Context\ApplicationContext;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use function Hyperf\Config\config;
+use function Hyperf\Coroutine\co;
 
 class AlarmClock
 {

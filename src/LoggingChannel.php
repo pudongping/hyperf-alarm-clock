@@ -17,25 +17,12 @@ use Hyperf\Contract\ConfigInterface;
 class LoggingChannel implements ChannelContract
 {
 
-    /**
-     * @var ContainerInterface
-     */
-    protected $container;
-
-    /**
-     * @var ConfigInterface
-     */
-    protected $config;
-
     protected $logger;
 
     public function __construct(
-        ContainerInterface $container,
-        ConfigInterface    $config
+        protected ContainerInterface $container,
+        protected ConfigInterface    $config
     ) {
-        $this->container = $container;
-        $this->config = $config;
-
         $logCfg = $this->config->get('hyperf_alarm_clock.channels.logging');
         $this->logger = $this->container->get(LoggerFactory::class)->get($logCfg['name'], $logCfg['group']);
     }

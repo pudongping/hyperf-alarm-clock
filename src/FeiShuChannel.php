@@ -12,28 +12,16 @@ namespace Pudongping\HyperfAlarmClock;
 
 use Hyperf\Guzzle\ClientFactory;
 use Hyperf\Contract\ConfigInterface;
-use Hyperf\Utils\Codec\Json;
+use Hyperf\Codec\Json;
 use GuzzleHttp\Exception\GuzzleException;
 
 class FeiShuChannel implements ChannelContract
 {
 
-    /**
-     * @var ClientFactory
-     */
-    protected $clientFactory;
-
-    /**
-     * @var ConfigInterface
-     */
-    protected $config;
-
     public function __construct(
-        ClientFactory   $clientFactory,
-        ConfigInterface $config
+        protected ClientFactory   $clientFactory,
+        protected ConfigInterface $config
     ) {
-        $this->clientFactory = $clientFactory;
-        $this->config = $config;
     }
 
     public function notice(array $data)
