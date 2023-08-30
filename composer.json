@@ -26,7 +26,8 @@
         "php": ">=7.2",
         "hyperf/http-server": "~2.2.0",
         "hyperf/logger": "~2.2.0",
-        "hyperf/config": "~2.2.0"
+        "hyperf/config": "~2.2.0",
+        "hyperf/guzzle": "~2.2.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5"
@@ -34,5 +35,10 @@
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Pudongping\\HyperfAlarmClock\\ConfigProvider"
+        }
     }
 }
