@@ -24,6 +24,18 @@
 composer require pudongping/hyperf-alarm-clock:^1.0 -vvv
 ```
 
+## 分支或者标签
+
+### 分支
+
+- **2.2:** For hyperf 2.2
+- **3.0:** For hyperf 3.0
+
+### 标签
+
+- **1.0.x:** For hyperf 2.2
+- **2.0.x:** For hyperf 3.0
+
 ## 配置
 
 ### 发布配置文件
