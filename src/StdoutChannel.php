@@ -37,14 +37,17 @@ class StdoutChannel implements ChannelContract
 
     public function notice(array $data)
     {
-        $message = $this->config->get('hyperf_alarm_clock.title') . ' : ' . Json::encode($data);
-        $this->logger->notice($message);
+        $this->logger->notice($this->message($data));
     }
 
     public function warning(array $data)
     {
-        $message = $this->config->get('hyperf_alarm_clock.title') . ' : ' . Json::encode($data);
-        $this->logger->warning($message);
+        $this->logger->warning($this->message($data));
+    }
+
+    private function message(array $data): string
+    {
+        return $this->config->get('hyperf_alarm_clock.title') . ' : ' . Json::encode($data);
     }
 
 }

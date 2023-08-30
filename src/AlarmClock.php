@@ -63,6 +63,7 @@ class AlarmClock
             $data['original_params'] = 'The body contains boundary data, ignore it.';
         }
 
+        // 详情可见 https://wiki.swoole.com/#/http_server?id=server
         $data['server_params'] = $request->getServerParams(); // 服务器相关参数
 
         if ($e instanceof Throwable) {
